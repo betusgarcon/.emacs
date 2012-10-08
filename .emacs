@@ -34,6 +34,7 @@
 (setq default-major-mode 'text-mode)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
+;;
 (global-set-key "\367" (quote clipboard-kill-ring-save))
 (put 'upcase-region 'disabled nil)
 (custom-set-variables
