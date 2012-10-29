@@ -9,6 +9,8 @@
 (global-set-key (kbd "C-q") 'other-window)
 (global-set-key (kbd "C-j") 'goto-line)
 
+;; 定制单行注释 c-u c-u 映射
+
 ;; 修改meta-x
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
@@ -133,7 +135,7 @@
 
 ;; 定义打开.emacs文件的函数
 (defun open-init-file ()(interactive)
-(find-file "~/emacs_config/.emacs"))
+(find-file "~/.emacs"))
 
 ;;c-z z 打开.emacs配置文件
 (global-set-key "\C-zz" 'open-init-file)
