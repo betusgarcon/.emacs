@@ -26,7 +26,7 @@
 ;;(setq ibus-cursor-color '("red" "blue" "limegreen"))
 
 ;;设置初始目录(c-x c-f)
-(setq default-directory "~/python_study")
+;;(setq default-directory "~/.emacs.d")
 
 ;;启用ibuffer支持，增强*buffer*  
 (require 'ibuffer)  
@@ -45,7 +45,8 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(display-time-mode t)
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
@@ -60,8 +61,8 @@
 (setq user-full-name "Betus")
 (setq user-mail-address "beyondsc1986@gmail.com")
 
-(setq load-path (cons "~/Downloads/org/org-7.7/lisp" load-path))
-(setq load-path (cons "~/Downloads/org/org-7.7/contrib/lisp" load-path))
+;;(setq load-path (cons "~/Downloads/org/org-7.7/lisp" load-path))
+;;(setq load-path (cons "~/Downloads/org/org-7.7/contrib/lisp" load-path))
 
 
 ;;设置字体微Inconsolata
@@ -170,7 +171,7 @@
 (add-to-list 'load-path "~/add-ons/vendor/auto-complete")
 
 (require 'auto-complete)
-(require 'python)
+;;(require 'python)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 (setq-default ac-sources '(ac-source-words-in-same-mode-buffers))
@@ -186,22 +187,22 @@
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 
 ;; python-mode
-(require 'python-mode)
-(autoload 'python-mode "python-mode" "Python Mode." t)
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+;;(require 'python-mode)
+;;(autoload 'python-mode "python-mode" "Python Mode." t)
+;;(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+;;(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;; Initialize Pymacs                                                                                           
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
-(autoload 'pymacs-autoload "pymacs")
+;;(autoload 'pymacs-apply "pymacs")
+;;(autoload 'pymacs-call "pymacs")
+;;(autoload 'pymacs-eval "pymacs" nil t)
+;;(autoload 'pymacs-exec "pymacs" nil t)
+;;(autoload 'pymacs-load "pymacs" nil t)
+;;(autoload 'pymacs-autoload "pymacs")
 
 ;; Initialize Rope
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
+;;(pymacs-load "ropemacs" "rope-")
+;;(setq ropemacs-enable-autoimport t)
 
 ;python 插件
 ;(require 'init_python)
@@ -230,7 +231,7 @@
 
 ;;设置emacs 打开默认的浏览器为chrome
 (setq browse-url-browser-function 'browse-url-generic 
-          browse-url-generic-program "/opt/google/chrome/google-chrome") 
+      browse-url-generic-program "/usr/bin/chromium-browser")
 
 ;;设置org-mode todo列表
 (setq org-todo-keywords
@@ -329,3 +330,4 @@
 (setq erc-nick "betus"
       erc-user-full-name "betus Su")
 
+(desktop-save-mode 1) 
